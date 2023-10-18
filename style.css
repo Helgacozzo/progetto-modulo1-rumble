@@ -11,3 +11,58 @@
 img{
     max-width: 100%;
 }
+
+body{
+    display: grid;
+    grid-template-columns: 79px 1fr;
+    grid-template-rows: 69px 60px 1fr 88px;
+    grid-template-areas: 
+    'header header'
+    'aside nav'
+    'aside main'
+    'aside footer';
+}
+
+body>header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+body>aside{
+    grid-area: aside;
+    background-color: blue;
+}
+
+body>nav{
+    grid-area: nav;
+    background-color: aquamarine;
+}
+
+body>main{
+    grid-area: main;
+    background-color: cornflowerblue;
+}
+
+body>footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}
+
+
+/* MEDIA QUERIES - TABLET */
+
+@media (max-width: 960px){
+
+    body{
+        grid-template-columns: 0 1fr;
+        transition: 0.5s;
+    }
+    
+}
+
+
+/* MEDIA QUERIES - MOBILE */
+
+/* @media (max-width: 640px) {
+    
+} */
