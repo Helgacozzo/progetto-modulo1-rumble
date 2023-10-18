@@ -100,19 +100,23 @@ span {
 /* HEADER */
 /* ---------------------- */
 
-header {
+body>header {
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
 }
 
-header>section {
+body>header>section {
     display: flex;
     align-items: center;
 }
 
-.menu>img:first-child {
-    margin-right: 1rem;
+.logo {
+    margin-left: 1rem;
+}
+
+.hamburger-icon {
+    cursor: pointer;
 }
 
 .btn-signIn {
@@ -123,6 +127,7 @@ header>section {
     border-radius: 10rem;
     border: none;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .btn-signUp {
@@ -133,6 +138,7 @@ header>section {
     border-radius: 10rem;
     border: 2px solid #85c742;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .search-bar>input {
@@ -201,6 +207,7 @@ body>main {
     border-radius: 10rem;
     border: 1px solid #85c742;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .video-rows {
@@ -257,6 +264,77 @@ body>main {
 }
 
 
+/* FOOTER */
+/* ---------------------- */
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.foot-nav-li {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.foot-nav-li>li {
+    list-style: none;
+    color: #061726;
+    padding: 0.5rem;
+}
+
+.foot-nav-li>li>a {
+    color: #061726;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+
+.foot-nav-li>li>a:hover {
+    text-decoration: underline;
+}
+
+.legal-list {
+    display: flex;
+}
+
+.legal-list>li {
+    display: flex;
+    list-style: none;
+    color: #061726;
+    padding: 0.5rem;
+}
+
+.legal-list>li>a {
+    color: #061726;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.legal-list>li>a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    display: flex;
+    font-size: 0.7rem;
+}
+
+
+/* MEDIA QUERIES - DESKTOP */
+/* ---------------------- */
+
+@media (min-width: 1024px) {
+
+    .foot-logo {
+        display: none;
+    }
+
+}
+
+
 /* MEDIA QUERIES - TABLET */
 /* ---------------------- */
 
@@ -295,40 +373,55 @@ body>main {
 
 }
 
+    /* MEDIA QUERIES - MOBILE */
 
-/* MEDIA QUERIES - MOBILE */
+    @media (max-width: 640px) {
 
-@media (max-width: 640px) {
+        body>header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
 
-    body>header {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1rem;
+        .search-bar>input {
+            display: none;
+        }
+
+        .search-bar>button {
+            border: none;
+        }
+
+        .search-bar {
+            margin-left: auto;
+        }
+
+        .logo {
+            width: 80%;
+        }
+
+        .video-rows {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .mobile-hide {
+            display: none;
+        }
+
+        .foot {
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 1.5rem 1rem;
+        }
+    
+        .foot-nav-li {
+            display: block;
+            padding: 0.5rem;
+        }
+    
+        .legal-list>li {
+            justify-content: center;
+    
+        }
+
     }
-
-    .search-bar>input {
-        display: none;
-    }
-
-    .search-bar>button {
-        border: none;
-    }
-
-    .search-bar {
-        margin-left: auto;
-    }
-
-    .logo {
-        width: 80%;
-    }
-
-    .video-rows {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .mobile-hide {
-        display: none;
-    }
-
-}
