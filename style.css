@@ -338,14 +338,18 @@ body>main {
 .nav-tags {
     display: flex;
     align-items: center;
+    max-width: 100%;
+    overflow: auto; 
+}
+
+.nav-tags::-webkit-scrollbar{
+    display: none;
 }
 
 .btn-tag {
-    padding: 0.5rem;
+    padding: 10px 15px;
     border-radius: 4rem;
     background-color: #F3F5F8;
-    font-size: 0.9rem;
-    font-weight: 400;
     display: flex;
     justify-content: center;
     margin-left: 5px;
@@ -353,12 +357,22 @@ body>main {
     cursor: pointer;
 }
 
-.tag>img {
-    width: 50px;
+.brand-tags>a{
+    text-decoration: none; 
+}
+
+.btn-tag-img {
+    padding: 12px 16px;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    border: none;
+    cursor: pointer;
+    width: 60px;
 }
 
 .nav-tags>.brand-tags {
-
     display: flex;
     align-items: center;
 }
@@ -367,8 +381,6 @@ body>main {
     display: flex;
     text-wrap: nowrap;
 }
-
-
 
 
 /* FOOTER */
